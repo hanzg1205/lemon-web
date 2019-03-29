@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/addBill.css" />
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="head">
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<nav class="nav-tab" id="navTab">
+						<span class="on">支出</span>
+						<span>收入</span>
+					</nav>
+				</div>
+				<div class="input">
+					<b id="inpBox">0.00</b>
+				</div>
+			</header>
+			<div class="mui-content">
+				<div class="mui-slider">
+					<div class="mui-slider-group" id="classifyBox">
+						<!--第一个内容区容器-->
+						<!-- <div class="mui-slider-item">
+							<section class="classify">
+								<dl class="active">
+									<dt class="mui-icon iconfont icon-canyin"></dt>
+									<dd>餐饮</dd>
+								</dl>
+							</section>
+						</div> -->
+
+					</div>
+					<div class="mui-slider-indicator" id="pageation">
+						<!-- <div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div> -->
+					</div>
+				</div>
+			</div>
+			<div class="keyword">
+				<section>
+					<p>7</p>
+					<p>4</p>
+					<p>1</p>
+					<p>.</p>
+				</section>
+				<section>
+					<p>8</p>
+					<p>5</p>
+					<p>2</p>
+					<p>0</p>
+				</section>
+				<section>
+					<p>9</p>
+					<p>6</p>
+					<p>3</p>
+					<p class="del">x</p>
+				</section>
+				<section>
+					<p class="done">完成</p>
+				</section>
+			</div>
+			
+		</div>
+
+		<script type="text/javascript" src="../js/libs/require.js"></script>
+		<script type="text/javascript">
+			require(['../js/main'], function() {
+				require(['addBill'])
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+	<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+
+    <!-- 侧滑导航根容器 -->
+    <div class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+        <!-- 菜单容器 -->
+        <aside class="mui-off-canvas-left">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll menu-c" id="menuBox">
+                    <!-- 菜单具体展示内容 -->
+                    <div class="classify-box">
+						<h2><p>收支类型</p></h2>
+						<div class="classify-list">
+							<span data-id="1">全部支出</span>
+							<span data-id="2">全部收入</span>
+							<!-- <span>全部其他</span> -->
+						</div>
+					</div>
+					<div class="classify-box">
+						<h2><p>收支分类</p></h2>
+						<div class="classify-list" id="menuOut" data-id="1">
+
+						</div>
+						<div class="classify-list classify-list2" id="menuIn" data-id="2">
+
+						</div>
+					</div>
+					<div class="classify-btn">
+						<p>重置</p>
+						<p id="confirm">确定</p>
+					</div>
+                </div>
+            </div>
+        </aside>
+        <!-- 主页面容器 -->
+        <div class="mui-inner-wrap">
+			<a href="./pages/addBill.html" class="addBillBtn"><i class="mui-icon mui-icon-plus"></i></a>
+            <!-- 主页面标题 -->
+            <header class="header">
+                <div class="spend-wrap">
+                    <h5>本月花费（元）</h5>
+                    <h3>8036.
+                        <font>00</font>
+                    </h3>
+                </div>
+                <div class="incon-wrap">
+                    <p>本月收入0.00</p>
+                </div>
+                <div class="time-wrap">
+                    <span id="timeType"><font>月</font> <i class="mui-icon mui-icon-arrowdown"></i></span>
+                    <span id="timeVal"><font>2018</font> <i class="mui-icon mui-icon-arrowdown"></i></span>
+                </div>
+            </header>
+            <div class="mui-content">
+                <!-- 主界面具体展示内容 -->
+				<!-- tab切换按钮 -->
+				<div class="tabs">
+					<i class="mui-icon mui-icon-loop" id="menuIcon"></i>
+					<div id="tabMenu">
+						<span class="active" data-index="0">账单</span>
+						<span data-index="1">图表</span>
+					</div>
+					<i class="mui-icon mui-icon-search"></i>
+				</div>
+				<!-- tab切换内容区域 -->
+				<div class="mui-scroll-wrapper tab-wrapper">
+					<div class="mui-scroll bill-scroll">
+						<!-- 账单 -->
+						<div class="bill">
+							<!-- 月账单 -->
+							<div class="bill_m" id="billM">
+								<!-- <h3>
+									<p><i></i>2019年10月</p>
+									<p>总消费 <span>8888</span></p>
+								</h3>
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell">
+										<div class="mui-slider-right mui-disabled">
+											<a class="mui-btn mui-btn-red">删除</a>
+										</div>
+										<div class="mui-slider-handle">
+											<i class="mui-icon mui-icon-image"></i>左滑显示删除按钮
+										</div>
+									</li>
+								</ul> -->
+							</div>
+							
+							<!-- 年账单 -->
+							<div class="bill_y hide" id="billY">
+								
+							</div>
+						</div>
+						<!-- 图表 -->
+						<div class="charat hide">
+							<div id="main" style="height:400px;margin:0 auto;"></div>
+						</div>
+					</div>
+				</div>			
+            </div>
+            <nav class="mui-bar mui-bar-tab">
+                <a class="mui-tab-item mui-active">
+                    <span class="mui-icon mui-icon-home"></span>
+                    <span class="mui-tab-label">首页</span>
+                </a>
+                <a class="mui-tab-item">
+                    <span class="mui-icon mui-icon-phone"></span>
+                    <span class="mui-tab-label">电话</span>
+                </a>
+                <a class="mui-tab-item">
+                    <span class="mui-icon mui-icon-email"></span>
+                    <span class="mui-tab-label">邮件</span>
+                </a>
+                <a class="mui-tab-item">
+                    <span class="mui-icon mui-icon-gear"></span>
+                    <span class="mui-tab-label">设置</span>
+                </a>
+            </nav>
+			<!-- off-canvas backdrop -->
+			<div class="mui-off-canvas-backdrop"></div>
+		</div>
+    </div>
+
+    <script type="text/javascript" src="js/libs/require.js"></script>
+    <script type="text/javascript">
+        require(['js/main'], function() {
+            require(['index'])
+        })
+    </script>
+</body>
+
+</html>
